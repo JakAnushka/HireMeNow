@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{%block title%}Skills Details{% endblock%}
+
+{% block body %}
+<div class="container my-5">
+  <h5>Next, let’s take care of your</h5>
+<h2><strong>skills</strong></h2>
+
+    <form method="post" action="{% url 'skills-details' my_object.id %}">
+        {% csrf_token %}
+        <textarea placeholder="Enter your Skills here..." name="skills" style="width:100%;height:100%;" cols="50" rows="10"></textarea>
+        <h2><strong>Work Experience</strong></h2>
+        <input type="text" placeholder="Company Name" name="project_name" style="width:75%;height:40px;">
+        <div class="col-sm-6">
+                <p>Graduation Date (or expected Graduation Date)</p>
+             <input type="text" placeholder="Month(eg.March)*" name="month" style="width:45%;height:40px;" required="required">
+                <input type="text" placeholder="Year(eg.2026)*" name="year" style="width:45%;height:40px;float:right" required="required">
+        </div>
+        <button type="submit" class="btn" style="width: 25%; border-radius:18px;background-color:#DDA853;font-size:20px;font-weight:bold;"><a href="/" style="text-decoration:none;color:#183B4E">Next</a></button>
+    </form>
+</div>
+{% endblock%}

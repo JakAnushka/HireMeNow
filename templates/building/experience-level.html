@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{%block title%}Your Experience{% endblock%}
+
+{% block body %}
+<div class="container my-5">
+    <div class="row text-center">
+<div class="col-lg-6" >
+    <img src="/static/image/student.png" class="bd-placeholder-img rounded-circle" width="140" height="140">
+         <h2 class="fw-normal">Are you a student?</h2>
+        <p>A person who have 0 experience.</p>
+        <a class="btn" href="/student-template" style="width: 25%; border-radius:18px;background-color:#DDA853;font-size:20px;font-weight:bold;">Next</a>
+    </div>
+
+    <div class="col-lg-6">
+    <img src="/static/image/worker.png" class="bd-placeholder-img rounded-circle" width="140" height="140">
+         <h2 class="fw-normal">Are you a professional?</h2>
+        <p>A person who have more than 3 year experience.</p>
+        <a class="btn" href="#" style="width: 25%; border-radius:18px;background-color:#DDA853;font-size:20px;font-weight:bold;">Next</a>
+    </div>
+        </div>
+</div>
+{% endblock %}

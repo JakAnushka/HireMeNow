@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{%block title%}Pdf Download{% endblock%}
+{% block body %}
+<div class="container"
+     style="background-color:transparent;height: 450px;
+     width:700px;margin-top:50px;padding-top:50px;">
+    <img
+            src="/static/image/download-pdf.png"
+            alt=".." style="width:100px;display: block;margin: auto;">
+    <p style="text-align:center;font-size:15px;padding-top:50px">See and Download your PDF here </p>
+    <a href="{% url 'pdf' my_object.id %}" style="text-decoration:none;">
+        <button type="button"
+                class="btn"
+                style="width: 200px;font-size:15px;
+                border-radius:18px;background-color:#85193C;
+                color: white;display: block;
+                margin: auto;width: 50%;">
+            PDF
+        </button>
+    </a>
+
+
+</div>
+
+{% endblock %}

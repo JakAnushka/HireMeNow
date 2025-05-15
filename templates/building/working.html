@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{%block title%}How It Works{% endblock%}
+
+{% block body %}
+<!--<div class="container">-->
+<!--    <h1>Just three simple steps</h1>-->
+<!--    <ol>-->
+<!--        <li> Select a template from our library of professional designs</li>-->
+<!--        <li> Build your resume with our industry-specific bullet points</li>-->
+<!--        <li>Customize the details and wrap it up. You’re ready to send!</li>-->
+<!--    </ol>-->
+<!--    <img src="sta">-->
+<!--</div>-->
+<div class="row featurette my-2 mx-3">
+
+    <div class="col-md-7">
+        <h1 class="featurette-heading fw-normal mb-3" style="font-size: 70px;">Just three
+            <br>simple steps</h1>
+        <p style="padding-top:20px">
+        <ol style="font-size: 20px;">
+        <li class="my-3"> Select a template from our library of professional designs</li>
+        <li class="my-3"> Build your resume with our industry-specific bullet points</li>
+        <li class="my-3">Customize the details and wrap it up. You’re ready to send!</li>
+        </ol>
+        </p>
+    <a class="btn" href="experience-level" style="width: 100%; border-radius:8px;background-color:#DDA853;font-size:20px;font-weight:bold;margin-top:90px;margin-bottom:15px">
+            Next
+        </a>
+    </div>
+    <div class="col-md-5 order-md-1">
+    <img src="/static/image/three-steps.jpeg" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500px" height="100px">
+  </div>
+
+
+</div>
+{% endblock%}

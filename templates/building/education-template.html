@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{%block title%}Education Details{% endblock%}
+
+{% block body %}
+<div class="container my-5">
+  <h5>Great, let’s work on your.</h5>
+<h2><strong>Education</strong></h2>
+  <p class="my-5"><strong>Here’s what you need to know:
+
+Employers quickly scan the education section.
+We’ll take care of the formatting so it’s easy to find.</strong></p>
+
+    <form method="post" action="{% url 'education-details' my_object.id %}">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-sm-6">
+                <p>Institute Name</p>
+                <input type="text" placeholder=" (eg.LNCT)*" name="institute_name" style="width:75%;height:40px;" required="required">
+            </div>
+                <div class="col-sm-6">
+                    <p>Institute Location</p>
+                    <input type="text" placeholder=" (eg.Bhopal,India)*" name="institute_location"  style="width:75%;height:40px;" required="required">
+                </div>
+        </div>
+        <div class="row my-5">
+            <div class="col-sm-6">
+                 <select name="degree" required="required" style="width:75%;height:40px;">
+                                        <option>--Degree*--</option>
+                                        <option value="btech">Bachelor of Technology</option>
+                                        <option value="ba">Bachelor of Arts</option>
+                                        <option value="bsc">Bachelor of Science</option>
+                                        <option value="bsa">Bachelor of Computer Applications</option>
+                                        <option value="bba">BBA</option>
+                                        <option value="mtech">Master of Technology</option>
+                                        <option value="msc">Master of Technology</option>
+                                        <option value="mca">Master of Computer Applications</option>
+                                        <option value="nodegree">No Degree</option>
+
+                 </select>
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col-sm-6">
+                <p>Field Of Study</p>
+                <input type="text" placeholder="(eg.CSE)*" name="fieldOfStudy" style="width:75%;height:40px;" required="required">
+            </div>
+            <div class="col-sm-6">
+                <p>Graduation Date (or expected Graduation Date)</p>
+             <input type="text" placeholder="Month(eg.March)*" name="month" style="width:45%;height:40px;" required="required">
+                <input type="text" placeholder="Year(eg.2026)*" name="year" style="width:45%;height:40px;float:right" required="required">
+        </div>
+        </div>
+         <a class="btn" href="skills-template/" style="width: 25%; border-radius:18px;background-color:#DDA853;font-size:20px;font-weight:bold;">
+
+<button type="submit" class="btn" style="width: 25%; border-radius:18px;background-color:#DDA853;font-size:20px;font-weight:bold;">Next
+</button></a>
+    </form>
+</div>
+{% endblock%}

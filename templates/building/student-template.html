@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{%block title%}Your Experience{% endblock%}
+
+{% block body %}
+<div class="container my-5">
+<h2><strong>What’s the best way for employers to contact you?</strong></h2>
+    <h5>We suggest including an email and phone number.</h5>
+    <p class="my-5"><strong>* indicates a required field</strong></p>
+
+    <form method="post" action="{% url 'details' %}">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-sm-6">
+        <input type="text" placeholder="First Name (eg.Disha)*" name="firstname" style="width:75%;height:40px;" required="required">
+        <input class="my-5" type="text" placeholder="City (eg.New Delhi)*" name="city" style="width:75%;height:40px;" required="required">
+        <input type="text" placeholder="Pincode (eg.110034)*" name="pincode" style="width:75%;height:40px;" required="required">
+            </div>
+                <div class="col-sm-6">
+        <input type="text" placeholder="Last Name (eg.Shrivastava)*" name="lastname"  style="width:75%;height:40px;" required="required">
+                    <input class="my-5" type="text" placeholder="Country (eg.India)*" name="country" style="width:75%;height:40px;" required="required">
+                    </div>
+        </div>
+        <div class="row my-5">
+            <div class="col-sm-6">
+                <input type="email" placeholder="Email (eg.xyz@gmail.com)*" name="email" style="width:75%;height:40px;" required="required">
+            </div>
+            <div class="col-sm-6">
+<input type="text" placeholder="Phone (eg.+91 7896321478)*" name="phone" style="width:75%;height:40px;" required="required">
+            </div>
+        </div>
+        <div class="row my-5">
+            <div class="col-sm-6">
+                <input type="text" placeholder="LinkedIn url(optional)" name="linkedin" style="width:75%;height:40px;">
+            </div>
+            <div class="col-sm-6">
+<input type="text" placeholder="Portfolio website (optional)" name="portfolio_web" style="width:75%;height:40px;" >
+            </div>
+            <div class="col-sm-12 my-4">
+            <textarea placeholder="Describe Yourself
+I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow."
+                      name="person_desc" style="width:100%;height:100%;" cols="100" rows="10"></textarea>
+            </div>
+        </div>
+                <a class="btn" href="/student-template" style="width: 25%; border-radius:18px;background-color:#DDA853;font-size:20px;font-weight:bold;">
+
+<button type="submit" class="btn" style="width: 25%; border-radius:18px;background-color:#DDA853;font-size:20px;font-weight:bold;">Next</button></a>
+    </form>
+</div>
+{% endblock%}
