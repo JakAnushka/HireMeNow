@@ -24,8 +24,8 @@ SECRET_KEY = 'django-insecure-%2h2q+sxrj#moo*=nv^tie2w!-6b)(yp1i%k31nj$8hg)*u4bg
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
+#added this so that can deploy our project
+ALLOWED_HOSTS = ["hiremenow-1.onrender.com", "localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -128,3 +128,4 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 
 ]
+
