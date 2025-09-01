@@ -27,6 +27,7 @@ Deployed Link: https://hiremenow-1.onrender.com
 
 ## 📂 Project Structure
 HireMeNow/
+
 │── HireMeNow/ # Project settings, URLs, WSGI
 
 │── main_app/ # Core app (models, views, forms, static, templates)
